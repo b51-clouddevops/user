@@ -1,20 +1,5 @@
-pipeline{
-    agent any 
-    stages {
-        stage('Lint Checks') {
-            steps {
-                script {
-                    nodejs.lintChecks()                  // Use script { when you're using groovy based conventions }
-                }
-            }
-        } 
-        stage('Code Quality Checks') {
-            steps {
-                sh "echo SonarChecksInProgress"   
+@Library('roboshop-shared-library@main') _
 
-            }
-        }     
-    }   // end of stages 
-}  // end of pipelines
-
+nodejs()
+// No need to mention call, nodejs.call()
 
