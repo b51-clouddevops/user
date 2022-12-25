@@ -1,4 +1,4 @@
-module "cart" {
+module "user" {
   source                    = "./vendor/modules/app"  
   ENV                       = var.ENV
   COMPONENT                 = var.COMPONENT 
